@@ -1,0 +1,31 @@
+# Reference repos — for reading only, never committed
+refs/
+
+# Secrets
+.env
+
+# Database (SQLite + WAL/SHM)
+db/*.sqlite
+db/*.sqlite-wal
+db/*.sqlite-shm
+*.sqlite
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+
+# Exports
+exports/
+*.log
+
+# Local Claude tooling
+.claude/

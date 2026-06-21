@@ -1,0 +1,17 @@
+# us-stock-radar dashboard theme — a dense, terminal-inspired dark palette.
+# Deliberately not the default Streamlit red-on-white; this is an internal
+# monitoring tool where information density and legibility come first.
+[theme]
+base = "dark"
+primaryColor = "#4ADE80"          # signal green — gains / active
+backgroundColor = "#0B0F14"       # near-black slate
+secondaryBackgroundColor = "#141B24"
+textColor = "#D7E0EA"
+font = "monospace"
+
+[server]
+headless = true
+runOnSave = true
+
+[browser]
+gatherUsageStats = false

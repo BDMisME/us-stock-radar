@@ -1,0 +1,82 @@
+# us-stock-radar — one-command stack.
+#   docker compose up --build
+#
+# All services share the same image and the same SQLite file (mounted volume),
+# coordinating purely through the DB (signals/alerts queues). SQLite runs in WAL
+# mode so concurrent readers/writers across containers are safe for a personal
+# single-user workload.
+services:
+  init-db:
+    build: .
+    command: python scripts/init_db.py
+    env_file: .env
+    volumes:
+      - ./db:/app/db
+
+  dashboard:
+    build: .
+    command: streamlit run app/main.py --server.address=0.0.0.0 --server.port=8501
+    env_file: .env
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./db:/app/db
+    depends_on:
+      init-db:
+        condition: service_completed_successfully
+    restart: unless-stopped
+
+  market_monitor:
+    build: .
+    command: python services/market_monitor.py
+    env_file: .env
+    volumes:
+      - ./db:/app/db
+    depends_on:
+      init-db:
+        condition: service_completed_successfully
+    restart: unless-stopped
+
+  signal_engine:
+    build: .
+    command: python services/signal_engine.py
+    env_file: .env
+    volumes:
+      - ./db:/app/db
+    depends_on:
+      init-db:
+        condition: service_completed_successfully
+    restart: unless-stopped
+
+  ai_worker:
+    build: .
+    command: python services/ai_worker.py
+    env_file: .env
+    volumes:
+      - ./db:/app/db
+    depends_on:
+      init-db:
+        condition: service_completed_successfully
+    restart: unless-stopped
+
+  alert_worker:
+    build: .
+    command: python services/alert_worker.py
+    env_file: .env
+    volumes:
+      - ./db:/app/db
+    depends_on:
+      init-db:
+        condition: service_completed_successfully
+    restart: unless-stopped
+
+  scheduler:
+    build: .
+    command: python services/scheduler.py
+    env_file: .env
+    volumes:
+      - ./db:/app/db
+    depends_on:
+      init-db:
+        condition: service_completed_successfully
+    restart: unless-stopped

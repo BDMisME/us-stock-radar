@@ -1,0 +1,27 @@
+# --- Dashboard ---
+streamlit>=1.40
+plotly>=5.24
+
+# --- Data / numerics ---
+pandas>=2.2
+numpy>=1.26
+pandas-ta>=0.3.14b0
+
+# --- Market data sources ---
+alpaca-py>=0.33          # IEX websocket + historical
+finnhub-python>=2.4      # quotes / news
+yfinance>=0.2.50         # history + fallback quote
+requests>=2.32           # FMP REST + Telegram Bot API + RSS
+
+# --- AI (Volcengine ARK via OpenAI-compatible API) ---
+openai>=1.50
+
+# --- Config / scheduling ---
+python-dotenv>=1.0
+pydantic>=2.7
+pydantic-settings>=2.3
+APScheduler>=3.10
+feedparser>=6.0          # RSS fallback for news
+
+# --- Tests ---
+pytest>=8.0

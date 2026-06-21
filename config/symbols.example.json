@@ -1,0 +1,46 @@
+{
+  "_comment": "Seed universe for scripts/seed_demo.py. Edit freely. Categories: holdings.category in {core, high_focus}; watchlist.category in {high_focus, general}.",
+  "holdings": [
+    {"symbol": "AAPL", "name": "Apple",            "shares": 50, "avg_cost": 180.0, "category": "core", "theme_tags": "bigtech", "stop_loss": 165.0, "take_profit": 240.0},
+    {"symbol": "MSFT", "name": "Microsoft",        "shares": 30, "avg_cost": 380.0, "category": "core", "theme_tags": "bigtech,ai", "stop_loss": 340.0, "take_profit": 480.0},
+    {"symbol": "NVDA", "name": "NVIDIA",           "shares": 40, "avg_cost": 95.0,  "category": "core", "theme_tags": "ai,semis", "stop_loss": 80.0, "take_profit": 160.0},
+    {"symbol": "AMZN", "name": "Amazon",           "shares": 25, "avg_cost": 150.0, "category": "core", "theme_tags": "ecommerce,cloud", "stop_loss": 135.0, "take_profit": 220.0},
+    {"symbol": "GOOGL","name": "Alphabet",         "shares": 35, "avg_cost": 140.0, "category": "core", "theme_tags": "bigtech,ai", "stop_loss": 125.0, "take_profit": 200.0},
+    {"symbol": "META", "name": "Meta Platforms",   "shares": 20, "avg_cost": 350.0, "category": "core", "theme_tags": "bigtech,ai", "stop_loss": 300.0, "take_profit": 600.0},
+    {"symbol": "TSLA", "name": "Tesla",            "shares": 30, "avg_cost": 220.0, "category": "core", "theme_tags": "ev,ai", "stop_loss": 180.0, "take_profit": 350.0},
+    {"symbol": "AMD",  "name": "AMD",              "shares": 40, "avg_cost": 130.0, "category": "core", "theme_tags": "semis,ai", "stop_loss": 110.0, "take_profit": 200.0},
+    {"symbol": "AVGO", "name": "Broadcom",         "shares": 15, "avg_cost": 140.0, "category": "core", "theme_tags": "semis,ai", "stop_loss": 120.0, "take_profit": 220.0},
+    {"symbol": "NFLX", "name": "Netflix",          "shares": 12, "avg_cost": 550.0, "category": "core", "theme_tags": "media", "stop_loss": 480.0, "take_profit": 800.0},
+    {"symbol": "CRM",  "name": "Salesforce",       "shares": 18, "avg_cost": 260.0, "category": "core", "theme_tags": "saas", "stop_loss": 230.0, "take_profit": 360.0},
+    {"symbol": "ADBE", "name": "Adobe",            "shares": 10, "avg_cost": 500.0, "category": "core", "theme_tags": "saas", "stop_loss": 440.0, "take_profit": 650.0},
+    {"symbol": "COST", "name": "Costco",           "shares": 8,  "avg_cost": 700.0, "category": "core", "theme_tags": "retail", "stop_loss": 640.0, "take_profit": 950.0},
+    {"symbol": "PEP",  "name": "PepsiCo",          "shares": 25, "avg_cost": 170.0, "category": "core", "theme_tags": "staples", "stop_loss": 150.0, "take_profit": 200.0},
+    {"symbol": "JPM",  "name": "JPMorgan",         "shares": 22, "avg_cost": 190.0, "category": "core", "theme_tags": "financials", "stop_loss": 165.0, "take_profit": 260.0},
+    {"symbol": "V",    "name": "Visa",             "shares": 20, "avg_cost": 250.0, "category": "core", "theme_tags": "financials", "stop_loss": 220.0, "take_profit": 330.0},
+    {"symbol": "MA",   "name": "Mastercard",       "shares": 14, "avg_cost": 420.0, "category": "core", "theme_tags": "financials", "stop_loss": 380.0, "take_profit": 560.0},
+    {"symbol": "UNH",  "name": "UnitedHealth",     "shares": 9,  "avg_cost": 500.0, "category": "core", "theme_tags": "healthcare", "stop_loss": 440.0, "take_profit": 620.0},
+    {"symbol": "HD",   "name": "Home Depot",       "shares": 12, "avg_cost": 340.0, "category": "core", "theme_tags": "retail", "stop_loss": 300.0, "take_profit": 430.0},
+    {"symbol": "DIS",  "name": "Disney",           "shares": 30, "avg_cost": 95.0,  "category": "core", "theme_tags": "media", "stop_loss": 82.0, "take_profit": 140.0}
+  ],
+  "high_focus": [
+    {"symbol": "PLTR", "name": "Palantir",       "theme_tags": "ai,data", "watch_level": 5, "target_buy_low": 20, "target_buy_high": 24, "reason": "AI 平台動能"},
+    {"symbol": "SMCI", "name": "Super Micro",    "theme_tags": "ai,hardware", "watch_level": 5, "target_buy_low": 30, "target_buy_high": 38, "reason": "AI 伺服器"},
+    {"symbol": "ARM",  "name": "Arm Holdings",   "theme_tags": "semis,ai", "watch_level": 4, "target_buy_low": 110, "target_buy_high": 125, "reason": "IP 授權成長"},
+    {"symbol": "COIN", "name": "Coinbase",       "theme_tags": "crypto", "watch_level": 4, "target_buy_low": 180, "target_buy_high": 210, "reason": "加密週期"},
+    {"symbol": "SNOW", "name": "Snowflake",      "theme_tags": "data,saas", "watch_level": 4, "target_buy_low": 130, "target_buy_high": 150, "reason": "資料雲"},
+    {"symbol": "NET",  "name": "Cloudflare",     "theme_tags": "infra,saas", "watch_level": 3, "target_buy_low": 80, "target_buy_high": 95, "reason": "邊緣運算"},
+    {"symbol": "CRWD", "name": "CrowdStrike",    "theme_tags": "security,saas", "watch_level": 4, "target_buy_low": 280, "target_buy_high": 310, "reason": "資安龍頭"},
+    {"symbol": "DDOG", "name": "Datadog",        "theme_tags": "observability,saas", "watch_level": 3, "target_buy_low": 110, "target_buy_high": 125, "reason": "可觀測性"},
+    {"symbol": "MDB",  "name": "MongoDB",        "theme_tags": "database,saas", "watch_level": 3, "target_buy_low": 230, "target_buy_high": 260, "reason": "資料庫"},
+    {"symbol": "PANW", "name": "Palo Alto",      "theme_tags": "security", "watch_level": 4, "target_buy_low": 320, "target_buy_high": 350, "reason": "平台化資安"}
+  ],
+  "general": [
+    "INTC","MU","QCOM","TXN","LRCX","AMAT","KLAC","ASML","TSM","ON",
+    "ORCL","SAP","NOW","INTU","WDAY","TEAM","ZS","OKTA","TWLO","SHOP",
+    "UBER","LYFT","ABNB","DASH","BKNG","MAR","SBUX","MCD","NKE","LULU",
+    "PG","KO","CL","MDLZ","MNST","WMT","TGT","LOW","CVS","ABBV",
+    "PFE","MRK","LLY","JNJ","TMO","DHR","ISRG","REGN","VRTX","GILD",
+    "XOM","CVX","COP","SLB","OXY","BA","CAT","DE","GE","HON",
+    "BAC","WFC","GS","MS","C","SCHW","BLK","AXP","SPGI","BRK-B"
+  ]
+}
